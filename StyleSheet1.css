@@ -1,0 +1,297 @@
+﻿header { /* Стили для шапки сайта */
+    text-align: center;
+    color: black; /* Цвет текста в шапке */
+    padding: 15px 0; /* Внутренние отступы сверху и снизу */
+}
+
+/* Нумерованный список */
+ol {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+    ol li {
+        margin-bottom: 12px;
+        padding-left: 10px;
+        line-height: 1.6;
+        font-size: 1.1em;
+    }
+
+        ol li::marker {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+/* Маркированный список с квадратными маркерами */
+ul.square-list {
+    list-style-type: square;
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+    ul.square-list li {
+        margin-bottom: 10px;
+        padding-left: 8px;
+        line-height: 1.5;
+        font-size: 1.1em;
+    }
+
+        ul.square-list li::marker {
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+
+    header h1 {
+        color: #008000;
+        font-size: 2.8em;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+    }
+nav { /* Стили для навигационного меню */
+    padding: 10px 0; /* Внутренние отступы сверху и снизу */
+    text-align: center;
+}
+
+    nav ul {
+        list-style: none; /* Убрать маркеры списка */
+        justify-content: center; /* Выравнивание по центру */
+        align-items: center;
+        display: inline-block;
+    }
+
+    nav li { /* Стили для элементов списка навигации */
+        margin: 0 15px; /* Внешние отступы слева и справа */
+    }
+
+.nav-container {
+    justify-content: center; /* Главное исправление - центрирование */
+    align-items: center;
+    width: 100%;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-family: ms sans serif, sans-serif;
+    font-size: 16px;
+}
+
+    .button-link:hover {
+        background-color: white;
+        background-image: url('фон для кнопок.jpg');
+    }
+
+.doc-links { /* Стили для блока ссылок на документы */
+    list-style: none; /* Убрать маркеры списка */
+    flex-wrap: wrap; /* Разрешает перенос на новую строку */
+    gap: 15px; /* Расстояние между элементами */
+    margin: 30px 0; /* Внешние отступы сверху и снизу */
+}
+
+.doc-link { /* Стили для ссылок на документы */
+    display: inline-block; /* Блочно-строчное отображение */
+    padding: 10px 15px; /* Внутренние отступы */
+    background-image: url('фон для кнопок.jpg');
+    color: black; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+    .doc-link:hover { /* Стили для ссылок при наведении */
+        background-color: white;
+    }
+
+.image-text-block { /* Стили для блока с изображением и текстом */
+
+    margin: 40px 0; /* Внешние отступы сверху и снизу */
+
+    border-radius: 8px; /* Скругление углов */
+    overflow: hidden; /* Скрывает выходящее за границы содержимое */
+}
+.image-text-block {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0;
+    background-image: url('фон для кнопок.jpg');
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.4;
+    margin: 25px 0;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+    .image-text-block img {
+        width: 35%; /* Уменьшенная ширина изображения */
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-right: 25px;
+    }
+
+.image-text-content {
+    width: 65%; /* Соответственно увеличенная ширина текстового блока */
+}
+
+
+.image-text-block {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0;
+    background-image: url('фон для кнопок.jpg');
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+    .image-text-block img {
+        width: 35%; /* Уменьшенная ширина изображения */
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-right: 25px;
+    }
+
+.image-text-content {
+    width: 65%; /* Соответственно увеличенная ширина текстового блока */
+    padding: 10px 0;
+}
+
+body {
+    font-family: 'ms sans serif', sans-serif;
+    background-image: url('фон.jpg');
+}
+
+}
+/* Блок с картинкой слева и текстом справа */
+.image-text-block {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0;
+    background-image: url('фон для кнопок.jpg');
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+    .image-text-block img {
+        width: 35%; /* Уменьшенная ширина изображения */
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-right: 25px;
+    }
+
+.image-text-content {
+    width: 65%; /* Соответственно увеличенная ширина текстового блока */
+    padding: 10px 0;
+}
+.image-text-block {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0;
+    background-image: url('фон для кнопок.jpg');
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+    .image-text-block img {
+        width: 35%; /* Уменьшенная ширина изображения */
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-right: 25px;
+    }
+
+.image-text-content {
+    width: 65%; /* Соответственно увеличенная ширина текстового блока */
+    padding: 10px 0;
+}
+header { /* Стили для шапки сайта */
+    text-align: center;
+    color: black; /* Цвет текста в шапке */
+    padding: 15px 0; /* Внутренние отступы сверху и снизу */
+}
+
+body {
+    font-family: 'ms sans serif', sans-serif;
+}
+
+nav { /* Стили для навигационного меню */
+    padding: 10px 0; /* Внутренние отступы сверху и снизу */
+    text-align: center;
+}
+
+    nav ul {
+        list-style: none; /* Убрать маркеры списка */
+        justify-content: center; /* Выравнивание по центру */
+        align-items: center;
+        display: inline-block;
+    }
+
+    nav li { /* Стили для элементов списка навигации */
+        margin: 0 15px; /* Внешние отступы слева и справа */
+    }
+
+.nav-container {
+    justify-content: center; /* Главное исправление - центрирование */
+    align-items: center;
+    width: 100%;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-family: ms sans serif, sans-serif;
+    font-size: 16px;
+}
+
+    .button-link:hover {
+        background-color: white;
+        background-image: url('фон для кнопок.jpg');
+    }
+
+.doc-links { /* Стили для блока ссылок на документы */
+    list-style: none; /* Убрать маркеры списка */
+    flex-wrap: wrap; /* Разрешает перенос на новую строку */
+    gap: 15px; /* Расстояние между элементами */
+    margin: 30px 0; /* Внешние отступы сверху и снизу */
+}
+
+.doc-link { /* Стили для ссылок на документы */
+    display: inline-block; /* Блочно-строчное отображение */
+    padding: 10px 15px; /* Внутренние отступы */
+    background-image: url('фон для кнопок.jpg');
+    color: black; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+    .doc-link:hover { /* Стили для ссылок при наведении */
+        background-color: white;
+    }
+
+.image-text-block2 {
+    margin: 40px 0;
+    padding: 40px 50px;
+    width: 100%;
+    border-radius: 12px;
+   
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #2d5016;
+    box-sizing: border-box;
+}
