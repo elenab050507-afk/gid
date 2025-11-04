@@ -1,62 +1,36 @@
-﻿<html>
+<html>
 <head>
     <title>Культурные достопримечательности</title>
-    <style>
-        /* Блок с картинкой слева и текстом справа */
-        .image-text-block {
-            display: flex;
-            align-items: flex-start;
-            margin: 40px 0;
-            background-image: url('фон для кнопок.jpg');
-            border-radius: 8px;
-            overflow: hidden;
-            padding: 20px;
-        }
-
-            .image-text-block img {
-                width: 35%; /* Уменьшенная ширина изображения */
-                height: auto;
-                object-fit: cover;
-                border-radius: 6px;
-                margin-right: 25px;
-            }
-
-        .image-text-content {
-            width: 65%; /* Соответственно увеличенная ширина текстового блока */
-            padding: 10px 0;
-        }
-        body {
-            font-family: 'ms sans serif', sans-serif;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="StyleSheet1.css">
 </head>
-<body background="фон.jpg">
+<body>
     <a href="index.htm">
         <img src="i.png" alt="На главную" width="50" height="30" />
     </a>
     <main>
-        <h1> Культурные достопримечательности </h1>
-        <div class="image-text-block fade-in">
-            <img src="краведческий музей.jpg" alt="Краеведческий музей" />
-            <div class="image-text-content">
-                <b>Краеведческий музей. Дом Мешкова</b><p>Чтобы познакомиться с историей Перми и природой Пермского края, сходите в краеведческий музей. Коллекции размещены в красивом старинном особняке, известном как дом Мешкова. В музейных залах хранится уникальная металлическая пластика 1 тысячелетия до нашей эры, предметы быта, раритетная мебель, фотографии и документы. Центральное место занимает гостиная с тщательно воссозданными интерьерами XIX века.</p>
-                <br><br><br>
+        <header>
+            <h1> Культурные достопримечательности </h1>
+            </header>
+                <div class="image-text-block fade-in">
+                    <img src="краведческий музей.jpg" alt="Краеведческий музей" />
+                    <div class="image-text-content">
+                        <b>Краеведческий музей. Дом Мешкова</b><p>Чтобы познакомиться с историей Перми и природой Пермского края, сходите в краеведческий музей. Коллекции размещены в красивом старинном особняке, известном как дом Мешкова. В музейных залах хранится уникальная металлическая пластика 1 тысячелетия до нашей эры, предметы быта, раритетная мебель, фотографии и документы. Центральное место занимает гостиная с тщательно воссозданными интерьерами XIX века.</p>
+                        <br><br><br>
 
-                <table border="0" cellpadding="5" cellspacing="0">
-                    <tr>
-                        <td><b>АДРЕС</b><br>ул. Монастырская, 11</td>
-                    </tr>
-                    <tr>
-                        <td><b>РЕЖИМ РАБОТЫ</b><br>вт.-вс. 10:00-19:00</td>
-                    </tr>
-                    <tr>
-                        <td><b>ВХОД</b><br>200 руб.</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </main>
+                        <table border="0" cellpadding="5" cellspacing="0">
+                            <tr>
+                                <td><b>АДРЕС</b><br>ул. Монастырская, 11</td>
+                            </tr>
+                            <tr>
+                                <td><b>РЕЖИМ РАБОТЫ</b><br>вт.-вс. 10:00-19:00</td>
+                            </tr>
+                            <tr>
+                                <td><b>ВХОД</b><br>200 руб.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+</main>
     <main>
         <div class="image-text-block fade-in">
             <img src="набережная.jpg" alt="Набережная города Перми" />
@@ -101,5 +75,4 @@
     </main>
 
 </body>
-
 </html>
