@@ -129,5 +129,74 @@
         <!-- Кнопка отправки -->
         <button type="submit" class="submit-btn">📤 Отправить отзыв</button>
     </form>
+    <script>
+
+        // 1. Работа с объектом Date
+        const now = new Date();
+        const dateInfo = document.createElement('div');
+        dateInfo.innerHTML = `
+        <div style="background:#f0f8ff; padding:10px; border-radius:6px; margin:10px 0; text-align:center;">
+            <strong>📅 Сегодня: ${now.toLocaleDateString('ru-RU')}</strong><br>
+            🕐 Текущее время: ${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}<br>
+        </div>
+`;
+
+        document.querySelector('h1').after(dateInfo);
+
+        // 2. Работа с массивами - сбор отзывов
+        const reviews = [];
+
+        // 3. Интерактивная форма
+        document.forms['forma1'].onsubmit = function (e) {
+            e.preventDefault();
+
+            const formData = {
+                name: this.text1.value,
+                email: this.email.value,
+                category: this.category.value,
+                rating: getSelectedRating(),
+                message: this.message.value
+            };
+
+            // Валидация
+            if (!formData.name || !formData.email || !formData.message) {
+                alert('❌ Заполните обязательные поля!');
+                return;
+            }
+
+            // Добавление в массив
+            reviews.push(formData);
+
+            // ФИНАЛЬНОЕ СООБЩЕНИЕ В ОКНЕ
+            const avgRating = calculateAvgRating();
+            alert(`✅ Спасибо за отзыв!\n\n📊 Статистика:\n• Всего отзывов: ${reviews.length}\n• Средняя оценка: ${avgRating}`);
+
+            this.reset();
+        };
+
+        function getSelectedRating() {
+            const ratings = document.getElementsByName('rating');
+            for (let rating of ratings) {
+                if (rating.checked) return rating.value;
+            }
+            return 'не указано';
+        }
+
+        function calculateAvgRating() {
+            const ratingValues = { 'excellent': 5, 'good': 4, 'satisfactory': 3, 'poor': 2 };
+            let total = 0, count = 0;
+
+            reviews.forEach(review => {
+                if (review.rating && ratingValues[review.rating]) {
+                    total += ratingValues[review.rating];
+                    count++;
+                }
+            });
+
+            return count > 0 ? (total / count).toFixed(1) : 'нет оценок';
+        }
+
+        console.log('✅ JavaScript активирован');
+    </script>
 </body>
 </html >
